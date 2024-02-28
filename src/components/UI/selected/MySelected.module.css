@@ -1,0 +1,9 @@
+.mySelected {
+    margin: 2px;
+    border: 1px solid #3e5fe0;
+    padding: 5px 15px;
+    color: gray;
+}
+.mySelected:focus {
+    outline: none;
+}
