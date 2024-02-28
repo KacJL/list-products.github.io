@@ -22,12 +22,11 @@ const App = observer(() => {
     })
 
     useEffect(() => {
-        fetchItems()
         fetchFieldsBrands()
     }, [])
 
     useEffect(() => {
-        fetchItems(store.numPage * 50)
+        fetchItems((store.numPage * 50) - store.limitCount)
     }, [store.numPage])
 
     const [fetchFilter, isFilterLoading] = useFetching(async (type, query) => {
